@@ -9,7 +9,7 @@ export const SellProduct = async(id_usuario,fecha,total,dirección,productos) =>
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ id_usuario,fecha,total,dirección,productos }) // Enviar cuerpo de la solicitud en formato JSON
+                body: JSON.stringify({ id_usuario,fecha,total,dirección,productos }) 
             })
             
             const data = await res.json()
