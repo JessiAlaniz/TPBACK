@@ -72,6 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Compra realizada con éxito');
         } else {
             alert('No hay productos en el carrito');
-        }
-    });
+        }
+    });
 });

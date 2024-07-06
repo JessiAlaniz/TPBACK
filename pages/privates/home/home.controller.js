@@ -109,14 +109,6 @@ const attachAddToCartListeners = () => {
 
             addToCart(id, name, price, image, quantity,'cart');
             showNotification(id, 'Producto agregado al carrito con éxito');
-        });
-    });
+        });
+    });
 };
-
-
-
-
-
-
-
-
