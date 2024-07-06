@@ -26,7 +26,7 @@ export const ProductsByCategory = async(id) =>{
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ id }) // Enviar cuerpo de la solicitud en formato JSON
+            body: JSON.stringify({ id }) 
         })
         
         const data = await res.json()

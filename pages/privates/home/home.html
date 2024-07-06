@@ -6,12 +6,11 @@
     <title>Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script>
-        // Verifica si el usuario está autenticado
+
         const userId = sessionStorage.getItem('userId');
         const loginUrl = sessionStorage.getItem('loginUrl');
 
         if (!userId || !loginUrl) {
-            // Redirige a la página de inicio de sesión si no está autenticado
             window.location.href = '../../publics/validacion.html';
         }
     </script>
@@ -22,10 +21,10 @@
             <button id="dropdownButton" class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
                 Opciones
             </button>
-            <div id="dropdownMenu" class="hidden origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <div id="dropdownMenu" class="hidden origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-gray-700 ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div class="py-1">
-                    <button id="all-products-btn" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">Ver todos los Productos</button>
-                    <select id="category-select" class="block w-full text-left px-4 py-2 text-gray-700 bg-white border-none focus:outline-none">
+                    <button id="all-products-btn" class="block w-full text-left px-4 py-2 text-white hover:bg-gray-600">Ver todos los Productos</button>
+                    <select id="category-select" class="block w-full text-left px-4 py-2 text-white bg-gray-700 border-none focus:outline-none hover:bg-gray-600">
                         <option value='all'>Seleccionar categoria</option>
                     </select>
                 </div>
@@ -36,8 +35,8 @@
         </button>
     </header>
 
-    <main class="container mx-auto p-5">
-        <h2 class="text-3xl font-bold mb-6 text-center text-white">Lista de Productos</h2>
+    <main class="container mx-auto p-5 mt-16">
+        <h2 class="text-3xl font-bold mb-6 text-center text-white">Bienvenido a la tienda en línea</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="grid"></div>
     </main>
 

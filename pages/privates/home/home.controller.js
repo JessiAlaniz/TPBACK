@@ -10,7 +10,7 @@ import { categoriesCarrito } from "../../../components/homeComponents/categories
 
 const btnAllProducts = document.getElementById('all-products-btn');
 const btnProductsByCategory = document.getElementById('category-select');
-const btnCart = document.getElementById('cart-btn'); // Botón "Mi Carrito"
+const btnCart = document.getElementById('cart-btn'); 
 
 Redireccionar(btnCart, '../carrito/carrito.html')
 
@@ -25,13 +25,11 @@ btnProductsByCategory.insertAdjacentHTML('beforeend', catCarrito);
 });
 })
 
-// Event listener para mostrar todos los productos
 btnAllProducts.addEventListener('click', async () => {
     const productos = await AllProducts();
     await renderizado(productos);
 });
 
-// Event listener para mostrar productos por categoría
 btnProductsByCategory.addEventListener('change', async () => {
     const indice = btnProductsByCategory.value;
     const productos = await ProductsByCategory(indice);
@@ -60,7 +58,7 @@ const loadCartQuantities = () => {
     }
 };
 
-// Función para adjuntar event listeners a los botones de incremento y decremento
+
 const attachIncrementDecrementListeners = () => {
     document.querySelectorAll('.increment-btn').forEach(btnIncrement => {
         btnIncrement.addEventListener('click', () => {
@@ -96,7 +94,7 @@ const attachIncrementDecrementListeners = () => {
 };
 
 
-// Función para adjuntar event listeners a los botones de agregar al carrito
+
 const attachAddToCartListeners = () => {
     document.querySelectorAll('.add-to-cart-btn').forEach(button => {
         button.addEventListener('click', (event) => {
@@ -109,6 +107,8 @@ const attachAddToCartListeners = () => {
 
             addToCart(id, name, price, image, quantity,'cart');
             showNotification(id, 'Producto agregado al carrito con éxito');
-        });
-    });
-};
+
+        });
+    });
+};        
+    

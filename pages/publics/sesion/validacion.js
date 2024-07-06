@@ -13,7 +13,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
         sessionStorage.setItem('userId', result.id);
         sessionStorage.setItem('email', result.email);
         sessionStorage.setItem('loginUrl', window.location.href);
-        window.location.href = '../../privates/home/home.html'; // Redireccionar a la página principal
+        window.location.href = '../../privates/home/home.html'; 
     } catch (error) {
         const errorMessage = document.getElementById('error-message');
         errorMessage.classList.remove('hidden');
